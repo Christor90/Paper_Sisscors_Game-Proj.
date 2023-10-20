@@ -1,5 +1,13 @@
 
 
+
+    const score = {
+        Wins: 0,
+        Losses: 0,
+        Draws: 0
+    };
+
+
 function playGame(playerMove) {
 
     const computerMove = pickComputerMove();
@@ -13,16 +21,16 @@ function playGame(playerMove) {
         } else if (computerMove === 'Paper') {
             result = 'You win';
         } else if (computerMove === 'Scissors') {
-            result = 'Draw!';
+            result = 'Draw';
         }
 
      } else if (playerMove === 'paper') {
          if (computerMove === 'Rock') {
-            result = 'You Win';
+            result = 'You win';
         } else if (computerMove === 'Paper') {
             result = 'Draw';
         } else if (computerMove === 'Scissors') {
-            result = 'You lose!';
+            result = 'You lose';
         }
 
         } else if (playerMove === 'rock') {
@@ -31,16 +39,26 @@ function playGame(playerMove) {
         } else if (computerMove === 'Paper') {
             result = 'You lose';
         } else if (computerMove === 'Scissors') {
-            result = 'You Win!';
+            result = 'You win';
         }                               
      }
+
+
+        if (result === 'You win') {
+            score.Wins += 1;
+        } else if (result === 'You lose') {
+            score.Losses += 1;
+        } else if (result === 'Draw') {
+            score.Draws += 1;
+        }
     
         
 
 
             //display the result in a pop up
 
-        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
+Wins: ${score.Wins}, Losses: ${score.Losses}, Draws: ${score.Draws}`);
 
     }
 
