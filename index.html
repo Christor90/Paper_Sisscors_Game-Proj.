@@ -14,53 +14,53 @@
 
     <section class="container">
         <main>
-            <button class="btn-all" onclick="
-        playGame('rock');
-    ">
-                <img src="rock-emoji.png" class="move-icon" />
+
+            <button class="btn-all js-rock-btn">
+                <img src="rock-emoji.png"
+                class="move-icon"
             </button>
 
-            <button class="btn-all" onclick="
-        playGame('paper');
-    ">
-                <img src="paper-emoji.png" class="move-icon" />
+            <button class="btn-all js-paper-btn">
+                <img src="paper-emoji.png"
+                class="move-icon"
             </button>
 
-            <button class="btn-all" onclick="
-        playGame('scissors');
-    ">
+            <button class="btn-all js-scissors-btn"> 
                 <img src="scissors-emoji.png" class="move-icon" />
             </button>
 
+            
             <p class="js-result result"></p>
             <p class="js-moves"></p>
             <p class="js-score score"></p>
+            <p class="js-reset-confirmation"></p>
 
             <div class="reset-btn-box">
-                <button class="btn-score-btn" onclick="
-            score.Wins = 0;
-            score.Losses = 0;
-            score.Draws = 0;
-            localStorage.removeItem('score');
-            updateScoreElement();
-            ">
+                <button class="btn-score-btn btn-reset-btn">
                     Reset Score
                 </button>
+
+                <button class="auto-play-btn                js-auto-play-btn"> Auto Play
+                </button>
             </div>
+
         </main>
     </section>
 
-    <p>
-        Click any of the button, the Computer will pick a Random move, a pop-up
-        window will appear, You Win, You Lose or Draw!
-    </p>
-
-    <article>
-        <h5>Game Tips</h5>
-        1. Rock beats Scissors <br />
-        2. Sissors beats Papper <br />
-        3. Papper beats Rock <br />
-    </article>
+    <div class="info">
+        <p>
+            Click any of the button, the Computer 
+            will pick a Random move, a pop-up
+            window will appear, You Win, You Lose or Draw!
+        </p>
+    </div>
+  
+<div class="game-tip">
+    <h2>Game Tips</h2>
+    1. Rock beats Scissors <br/>
+    2. Sissors beats Papper <br/>
+    3. Papper beats Rock <br/>
+</div>
 
     <h4>Try you luck people....!</h4>
 

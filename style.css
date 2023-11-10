@@ -107,15 +107,19 @@ p {
   margin-top: 50px;
 }
 
-.btn-score-btn {
+.btn-score-btn,
+.auto-play-btn {
   background-color: white;
   border: none;
   font-size: 15px;
   padding: 10px 15px;
   cursor: pointer;
+  margin-right: 30px;
 }
 
-article {
+
+
+.game-tip {
   text-align: center;
 }
 
@@ -126,4 +130,16 @@ h4 {
 .reset-btn-box {
   display: flex;
   justify-content: center;
+}
+
+
+
+.js-reset-confirm-yes,
+.js-reset-confirm-no {
+  background-color: white;
+  border: none;
+  font-size: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-right: 20px;
 }
